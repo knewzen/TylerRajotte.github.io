@@ -8,6 +8,10 @@ body{
 	border-bottom: #B73A3C;
 }
 
+#titleimgimage{
+	width: 100%
+}
+
 .rTable{
 	display: table;
 }
