@@ -21,3 +21,8 @@ body{
 .rTableCell{
 	display: table-cell;
 }
+
+.parallax-window {
+	min-height: 400px;
+	background: transparent;
+}
