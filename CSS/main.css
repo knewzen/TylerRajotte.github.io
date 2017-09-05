@@ -4,12 +4,12 @@ body{
 	margin: 0;
 }
 
-#titleimage{
+#titleimagecontainer{
 	border-bottom: #B73A3C;
 }
 
-#titleimgimage{
-	width: 100%
+#titleimage{
+	width: 100%;
 }
 
 .rTable{
@@ -20,9 +20,4 @@ body{
 }
 .rTableCell{
 	display: table-cell;
-}
-
-.parallax-window {
-	min-height: 400px;
-	background: transparent;
 }
