@@ -4,12 +4,24 @@ body{
 	margin: 0;
 }
 
-#titleimagecontainer{
-	border-bottom: #B73A3C;
+#titlecontainer{
+	width: 100%;
+	height: 70vh;
+	
+	background-image: url(../Images/DALogo.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	
+	border-bottom-width: 30px;
+	border-bottom-color: #D32F2F;
+	border-bottom-style: solid;
 }
 
 #titleimage{
-	width: 100%;
+	width: 100vw;
+	clip-path: inset(500px 0px 500px 0px);
+	overflow: hidden;
 }
 
 .rTable{
