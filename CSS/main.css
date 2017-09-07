@@ -1,31 +1,27 @@
 body{
-	background-color: #D3D3D3;
 	padding: 0;
 	margin: 0;
+	background-color: #EEE8E8;
 }
 
 #titlecontainer{
 	width: 100%;
 	height: 70vh;
-	
-	background-image: url(../Images/DALogo.jpg);
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center;
-	
-	border-bottom-width: 30px;
-	border-bottom-color: #D32F2F;
+
+	border-bottom-width: 10px;
+	border-bottom-color: #C65858;
 	border-bottom-style: solid;
 }
 
-#titleimage{
-	width: 100vw;
-	clip-path: inset(500px 0px 500px 0px);
-	overflow: hidden;
+.parallax-window {
+	min-height: 70vh;
+	background: transparent;
 }
+
 
 .rTable{
 	display: table;
+	width: 100%;
 }
 .rTableRow{
 	display: table-row;
