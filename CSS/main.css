@@ -19,13 +19,27 @@ body{
 }
 
 
-.rTable{
-	display: table;
+.Container{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	align-items: center;
+	align-content: flex-start;
+	
 	width: 100%;
 }
-.rTableRow{
-	display: table-row;
+.Item{
+	margin: 10px;
+	min-width: 20%;
+	min-height: 20%;
+	
+	background-color: #C65858;
+	
+	padding: 10px;
+	border-radius: 5px;
+	
+	max-height: 50%;
+	max-width: 50%;
 }
-.rTableCell{
-	display: table-cell;
-}
+
