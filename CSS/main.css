@@ -51,6 +51,10 @@ h1{
 	
 	max-height: 30%;
 	max-width: 30%;
+	
+	-webkit-box-shadow: 7px 7px 32px -8px rgba(0,0,0,0.69);
+	-moz-box-shadow: 7px 7px 32px -8px rgba(0,0,0,0.69);
+	box-shadow: 7px 7px 32px -8px rgba(0,0,0,0.69);
 }
 
 .ItemImage{
