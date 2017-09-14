@@ -4,7 +4,7 @@ body{
 	background-color: #EEE8E8;
 }
 
-h1{
+h1.BodyText{
 	margin-bottom: 0px;
 	
 	text-align: center;
@@ -14,7 +14,7 @@ h1{
 	font-size: 200%;
 }
 
-h2{
+h2.BodyText{
 	margin: 0px;
 	padding-bottom: 3%;
 	
@@ -36,6 +36,11 @@ h2{
 }
 
 #SiteViewButton{
+	width: 150%;
+	height: 100%;
+}
+
+#SiteViewButtonContainer{
 	
 }
 
@@ -90,11 +95,11 @@ h2{
 	position: fixed;
 	width: 100%;
 	
-	background-color: white;
+	background-color: orange;
 	
 	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
+	flex-direction: row-reverse;
+	flex-wrap: wrap-reverse;
 	justify-content: flex-end;
 	align-items: center;
 	align-content: flex-start;
@@ -102,5 +107,18 @@ h2{
 }
 
 .TopbarItem{
-	padding: 20px;
+	margin-left: 1.25%;
+	margin-right: 1.25%;
+	
+}
+
+h1.TopbarText{
+	text-align: center;
+	color: white;
+	
+	margin: 0px;
+	padding: 0px;
+	
+	font-family: 'Open Sans', sans-serif;
+	font-size: 150%;
 }
