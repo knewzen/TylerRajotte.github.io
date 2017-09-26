@@ -44,9 +44,9 @@ h2.BodyText{
   	filter: drop-shadow(4px 4px 2px rgba(0, 0, 0, 0.40));
 }
 
-#SiteViewButtonContainer{
-
-}
+.bodycontainer{
+	/* Use with site map */
+} 
 
 .parallax-window {
 	min-height: 70vh;
@@ -126,4 +126,13 @@ h1.TopbarText{
 	font-family: 'Open Sans', sans-serif;
 	font-size: 150%;
 	text-shadow: 4px 4px 2px rgba(0, 0, 0, 0.40);
+}
+
+.sitemap{
+	height: 100%;
+	width: 5vw;
+	
+	/* needs more work */
+	background-color: steelblue;
+	
 }

@@ -7,6 +7,7 @@
 		<script src="JS/detectmobilebrowser.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 		<script src="JS/parallax.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
 		<script src="JS/main.js"></script>
@@ -17,7 +18,7 @@
 	
 	<body>
 		<div class="TopBarContainer">
-			<div class="TopbarItem" id="SiteViewButtonContainer" style="order:5;">
+			<div class="TopbarItem" style="order:5;">
 				<img id="SiteViewButton" src="Images/Menu.svg">
 			</div>
 			
@@ -38,65 +39,70 @@
 			</div>
 		</div>
 		
+		<div class="sitemap">
+		hello
+		</div>
+		
 		<script src="JS/ScrollMagic.js"></script>		
 		
-		<div id="titlecontainer"> 
-				<div class="parallax-window" data-parallax="scroll" data-image-src="Images/DALogo.jpg"> 
+		<div class="bodycontainer">
+			<div id="titlecontainer"> 
+					<div class="parallax-window" data-parallax="scroll" data-image-src="Images/DALogo.jpg"> 
+					</div>
+			</div>
+			
+			<!-- Main Body Start -->
+			
+			<div class="Container">
+				
+				<div class="Item" style="order:-8;">
+				  <h1 class="BodyText">Animated Gifs</h1>
+				  <h2 class="BodyText">September, 2017</h2>
+					<img class="ItemImage" src="Images/T3iPlaceholder.jpg">
 				</div>
-		</div>
-		
-		<!-- Main Body Start -->
-		
-		<div class="Container">
-			
-			<div class="Item" style="order:-8;">
-			  <h1 class="BodyText">Animated Gifs</h1>
-			  <h2 class="BodyText">September, 2017</h2>
-				<img class="ItemImage" src="Images/T3iPlaceholder.jpg">
-			</div>
-			
-			<div class="Item" style="order:-7;">
-			  <h1 class="BodyText">Faces of Hunting Hills</h1>
-			  <h2 class="BodyText">September 29, 2017</h2>
-				<img class="ItemImage" src="Images/FacesOfHunting.JPG">
-			</div>
-			
-			<div class="Item" style="order:-6;">
-			  <h1 class="BodyText">Photo Series</h1>
-			  <h2 class="BodyText">September 21, 2017</h2>
-				<img class="ItemImage" src="Images/PhotoSeries.jpg">
-			</div>
-			
-			<div class="Item" style="order:-5;">
-			  <h1 class="BodyText">Extreme Angles</h1>
-			  <h2 class="BodyText">September 17, 2017</h2>
-				<img class="ItemImage" src="Images/ExtemeAngle.JPG">
-			</div>
-			
-			<div class="Item" style="order:-4;">
-			  <h1 class="BodyText">Frozen Motion</h1>
-			  <h2 class="BodyText">September 15, 2017</h2>
-				<img class="ItemImage" src="Images/StillMotion.JPG">
-			</div>
-			
-			<div class="Item" style="order:-3;">
-				<h1 class="BodyText">Rules of Composition</h1>
-				<h2 class="BodyText">September 13, 2017</h2>
-				<img class="ItemImage" src="Images/Rajotte_RulesOfComp.JPG">
-			</div>
-			
-			<div class="Item" style="order:-2;">
-				<h1 class="BodyText">Circles in Photos</h1>
-				<h2 class="BodyText">September 8, 2017</h2>
-				<img class="ItemImage" src="Images/Rajotte_CircleMiscObject1.JPG">
-			</div>
-			
-			<div class="Item" style="order:-1;">
-				<h1 class="BodyText">Biteable Healthy Eating Video</h1>
-				<h2 class="BodyText">September 5, 2017</h2>
-				<img class="ItemImage" src="Images/Biteable.jpg">
+				
+				<div class="Item" style="order:-7;">
+				  <h1 class="BodyText">Faces of Hunting Hills</h1>
+				  <h2 class="BodyText">September 29, 2017</h2>
+					<img class="ItemImage" src="Images/FacesOfHunting.JPG">
+				</div>
+				
+				<div class="Item" style="order:-6;">
+				  <h1 class="BodyText">Photo Series</h1>
+				  <h2 class="BodyText">September 21, 2017</h2>
+					<img class="ItemImage" src="Images/PhotoSeries.jpg">
+				</div>
+				
+				<div class="Item" style="order:-5;">
+				  <h1 class="BodyText">Extreme Angles</h1>
+				  <h2 class="BodyText">September 17, 2017</h2>
+					<img class="ItemImage" src="Images/ExtemeAngle.JPG">
+				</div>
+				
+				<div class="Item" style="order:-4;">
+				  <h1 class="BodyText">Frozen Motion</h1>
+				  <h2 class="BodyText">September 15, 2017</h2>
+					<img class="ItemImage" src="Images/StillMotion.JPG">
+				</div>
+				
+				<div class="Item" style="order:-3;">
+					<h1 class="BodyText">Rules of Composition</h1>
+					<h2 class="BodyText">September 13, 2017</h2>
+					<img class="ItemImage" src="Images/Rajotte_RulesOfComp.JPG">
+				</div>
+				
+				<div class="Item" style="order:-2;">
+					<h1 class="BodyText">Circles in Photos</h1>
+					<h2 class="BodyText">September 8, 2017</h2>
+					<img class="ItemImage" src="Images/Rajotte_CircleMiscObject1.JPG">
+				</div>
+				
+				<div class="Item" style="order:-1;">
+					<h1 class="BodyText">Biteable Healthy Eating Video</h1>
+					<h2 class="BodyText">September 5, 2017</h2>
+					<img class="ItemImage" src="Images/Biteable.jpg">
+				</div>
 			</div>
 		</div>
-		
 	</body>
 </html>
