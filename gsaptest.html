@@ -10,18 +10,39 @@
 		<link href="Images/favicon.ico" rel="icon" type="image/x-icon" />
 		
 		<style>
-		.mainbox{
-			width: 20vw;
-			height: 20vh;
-		}
+			* {
+				margin: 0;
+				padding: 0;
+			}
+
+			.mainbox{
+				width: 20vw;
+				height: 20vh;
+				background-color: aqua;
+				padding: 20px;
+				padding-bottom: 35px;
+				overflow: hidden;
+				border-radius: 10px;
+			}
+
+			html, body {
+				height: 100%; 
+			}
+			
+			body{
+				background-color: #333333;
+			}
 		</style>
 	</head>
 	
 	<!-- Top Bar Start--> 
 	
 	<body>
-		<div class="mainbox" style="display:flex;justify-content:center;align-items:center;">
-			<div></div>
+		<div style="display:flex; justify-content:center; align-items:center; width: 100%; height:100%;">
+			<div class="mainbox">
+				<b>Cats Cats Cats Cats Cats Cats Cats Cats Cats Cats Cats</b>
+				<img src="http://lorempixel.com/1920/1080/cats/" style="height: inherit; width: inherit">
+			</div>
 		</div>
 	</body>
 </html>
