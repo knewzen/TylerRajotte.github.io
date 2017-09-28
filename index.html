@@ -7,6 +7,7 @@
 		<script src="JS/detectmobilebrowser.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 		<script src="JS/parallax.min.js"></script>
+        <script src="JS/rellax.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
@@ -40,26 +41,15 @@
 					</div>	
 				</div>
 			</div>
-			<div class="bodyitem hvr-fade"> 
-				<div class="parallax-window" data-parallax="scroll" data-image-src="Images/Rajotte_GifChairs.gif"> 
-				</div>
-			</div>
-			<div class="bodyitem hvr-fade"> 
-				<div class="parallax-window" data-parallax="scroll" data-image-src="Images/PhotoSeries.jpg"> 
-				</div>
-			</div>
-			<div class="bodyitem hvr-fade"> 
-				<div class="parallax-window" data-parallax="scroll" data-image-src="Images/ExtremeAngle.JPG"> 
-				</div>
-			</div>
-			<div class="bodyitem hvr-fade"> 
-				<div class="parallax-window" data-parallax="scroll" data-image-src="Images/StillMotion.jpg"> 
-				</div>
-			</div>
-			<div class="bodyitem hvr-fade"> 
-				<div class="parallax-window" data-parallax="scroll" data-image-src="Images/Rajotte_RulesOfComp.JPG"> 
-				</div>
-			</div>
+		    <div class="bodyitem rellax parallax-window" data-rellax-speed="-3" id="testitem">
+                <img src="Images/ExtremeAngle.JPG" style="width: 100%;">
+            </div>
+            
+            
+
+            <script>
+                var rellax = new Rellax('.rellax');
+            </script>
 			<div>
 				<img src="Images/testthing.png">
 			</div>
