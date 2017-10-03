@@ -71,7 +71,7 @@ h2.SubText{
 }
 
 #photo1{
-    background-image: url("/Images/PhotoSeries.jpg");
+    background-image: url("Images/PhotoSeries.jpg");
 
     height: 100%; 
     
@@ -81,7 +81,7 @@ h2.SubText{
 }
 
 #photo2{
-    background-image: url("/Images/FacesOfHunting.JPG");
+    background-image: url("Images/FacesOfHunting.JPG");
 
     height: 100%; 
     
@@ -91,7 +91,7 @@ h2.SubText{
 }
 
 #photo3{
-    background-image: url("/Images/ExtremeAngle.JPG");
+    background-image: url("Images/ExtremeAngle.JPG");
 
     height: 100%; 
     
