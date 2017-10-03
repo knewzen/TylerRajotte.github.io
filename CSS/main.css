@@ -25,7 +25,7 @@ html, body{
 	list-style-type: none;
 }
 
-#testitem{
+.testitem{
     margin: 0;
     padding: 0;
 }
