@@ -5,12 +5,6 @@
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
 		<link href="CSS/main.css" rel="stylesheet" type="text/css">
 		<script src="JS/detectmobilebrowser.js"></script>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-		<script src="JS/parallax.min.js"></script>
-        <script src="JS/rellax.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
 		<link href="Images/favicon.ico" rel="icon" type="image/x-icon" />
 	</head>
 	
@@ -18,12 +12,13 @@
 	
 	<body>
 		<div class="bodycontainer">
-			<div class="bodyitem relax" data-rellax-speed="-4" id="header">
+		
+			<div class="bodyitem" id="header">
 				<div class="centerdiv">
-					<div class="HeaderItem">
+					<div>
 						<h1 class="TitleText">Tyler Rajotte</h1>
 					</div>
-					<div class="HeaderItem">
+					<div>
 						<ul id="SubTextList">
 							<li>
 								<h2 class="SubText">Home</h2>
@@ -44,22 +39,22 @@
             
             
             
-		    <div class="bodyitem rellax parallax-window testitem" data-rellax-speed="-8" data-rellax-percentage="0.5">
-                <img src="Images/ExtremeAngle.JPG" style="width: 100%;">
+		    <div class="bodyitem parallax" id="item1">
             </div>
             
-            <div class="bodyitem rellax parallax-window testitem" data-rellax-speed="-8" data-rellax-percentage="0.5">
-                <img src="Images/PhotoSeries.jpg" style="width: 100%;">
+            <div class="bodyitem parallax" id="item2">
             </div>
             
-            
-
-            <script>
-                var rellax = new Rellax('.rellax');
-            </script>
-			<div class="bodyitem rellax" data-rellax-speed="-4">
-				<img src="Images/testthing.png">
+			<div class="bodyitem parallax" id="item3">
 			</div>
+			
 		</div>
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
+        <script src="JS/main.js"></script>
 	</body>
 </html>
