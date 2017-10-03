@@ -66,22 +66,29 @@ h2.SubText{
 }
 
 .wipeoverlay{
-    height: 50vh;
     width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+h1.title{
+    text-align: center;
+    color: white;
 }
 
 #photo1{
-    background-image: url("Images/PhotoSeries.jpg");
+    background-image: url("/Images/Rajotte_CircleMiscObject1.JPG");
 
     height: 100%; 
     
+    color: transparent;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 #photo2{
-    background-image: url("Images/FacesOfHunting.JPG");
+    background-image: url("/Images/FacesOfHunting.JPG");
 
     height: 100%; 
     
@@ -91,7 +98,7 @@ h2.SubText{
 }
 
 #photo3{
-    background-image: url("Images/ExtremeAngle.JPG");
+    background-image: url("/Images/ExtremeAngle.JPG");
 
     height: 100%; 
     
