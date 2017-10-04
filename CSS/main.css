@@ -77,8 +77,8 @@ h1.title{
 }
 
 #photo1{
-    background-image: url("/Images/Rajotte_CircleMiscObject1.JPG");
-
+    background-image: url("/Images/Rajotte_CircleMiscObject1.jpg");
+    
     height: 100%; 
     
     color: transparent;
