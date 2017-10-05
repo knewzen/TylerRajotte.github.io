@@ -77,9 +77,11 @@ h1.title{
 }
 
 #photo1{
-    background-image: url("/Images/Rajotte_CircleMiscObject1.jpg");
+/*    background-image: url("/Images/Rajotte_CircleMiscObject1.jpg");*/
+    background-color: darkseagreen;
     
     height: 100%; 
+    width: 100%;
     
     color: transparent;
     background-position: center;
@@ -88,9 +90,12 @@ h1.title{
 }
 
 #photo2{
-    background-image: url("/Images/FacesOfHunting.JPG");
+/*    background-image: url("/Images/FacesOfHunting.JPG");*/
+    
+    background-color: midnightblue;
 
     height: 100%; 
+    width: 100%;
     
     background-position: center;
     background-repeat: no-repeat;
@@ -98,9 +103,12 @@ h1.title{
 }
 
 #photo3{
-    background-image: url("/Images/ExtremeAngle.JPG");
-
+/*    background-image: url("/Images/ExtremeAngle.JPG");*/
+    
+    background-color: indianred;
+    
     height: 100%; 
+    width: 100%;
     
     background-position: center;
     background-repeat: no-repeat;
