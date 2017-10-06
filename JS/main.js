@@ -18,4 +18,12 @@ $(document).ready(function(){
     .setTween()
     .addIndicators()
     .addTo(controller)
+	
+	$("form.loglevel input[type=checkbox]").on("change", function (e) {
+		var
+			target = $(this).attr("id") == "logcontroller" ? controller : scene,
+			level = $(this).prop("checked") ? 3 : 0;
+
+		target.loglevel(level);
+	});
 });

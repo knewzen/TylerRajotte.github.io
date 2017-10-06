@@ -35,29 +35,43 @@
 				</div>	
             </div>
         </div>
+        
+        <form class="loglevel move">
+			<fieldset>
+				<legend>Console Output</legend>
+				<div>
+					<input type="checkbox" id="logcontroller" value="1" checked="">
+					<label for="logcontroller">Controller</label>
+				</div>
+				<div>
+					<input type="checkbox" id="logscene" value="1" checked="">
+					<label for="logscene">Scene</label>
+				</div>
+			</fieldset>
+		</form>    
             
         <div id="bodyitemcontainer">
-            <div class="bodyitem" id="photo1">
+            <div class="bodyitem" id="photo1" style="z-index: 6;">
                 <p> Hi </p>
             </div>
 
-            <div class="bodyitem wipeoverlay" id="transition1">
+            <div class="bodyitem wipeoverlay" id="transition1" style="z-index: 5;">
                 <h1 class="title">Photo Series</h1>
             </div>
 
-            <div class="bodyitem" id="photo2">
+            <div class="bodyitem" id="photo2" style="z-index: 4;">
                 <p> Hi </p>
             </div>
 
-            <div class="bodyitem wipeoverlay" id="transition2">
+            <div class="bodyitem wipeoverlay" id="transition2" style="z-index: 3;">
                 <h1 class="title">Faces Of Hunting Hills</h1>
             </div>
 
-            <div class="bodyitem" id="photo3">
+            <div class="bodyitem" id="photo3" style="z-index: 2;">
                 <p> Hi </p>
             </div>
 
-            <div class="bodyitem wipeoverlay" id="transition3">
+            <div class="bodyitem wipeoverlay" id="transition3" style="z-index: 1;">
                 <h1 class="title">Extreme Angles</h1>
             </div>
         </div>
