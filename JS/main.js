@@ -9,21 +9,13 @@ $(document).ready(function(){
         .fromTo("#item3", 1, {y: "100%"}, {y: "0%", ease: Linear.easeNone})
         .fromTo("#transition3", 1, {opacity: "0%"}, {opacity: "100%", ease: Linear.easeNone});
     
-	var ourScene = new ScrollMagic.Scene({
+	var scene = new ScrollMagic.Scene({
 		triggerElement: "#bodyitemcontainer",
-        triggerHook: "onLeave",
+        triggerHook: "0",
         duration: "600%"
 	})
 	.setPin("#bodyitemcontainer")
-    .setTween()
+    .setTween(wipetimeline)
     .addIndicators()
     .addTo(controller)
-	
-	$("form.loglevel input[type=checkbox]").on("change", function (e) {
-		var
-			target = $(this).attr("id") == "logcontroller" ? controller : scene,
-			level = $(this).prop("checked") ? 3 : 0;
-
-		target.loglevel(level);
-	});
 });
