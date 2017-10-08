@@ -3,81 +3,114 @@
 	<head>
 		<title> Tyler Rajotte </title>
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
-		<link href="https://necolas.github.io/normalize.css/7.0.0/normalize.css" rel="stylesheet" type="text/css">
 		<link href="CSS/main.css" rel="stylesheet" type="text/css">
-		
 		<script src="JS/detectmobilebrowser.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+		<script src="JS/parallax.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
-		
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
+		<script src="JS/main.js"></script>
 		<link href="Images/favicon.ico" rel="icon" type="image/x-icon" />
 	</head>
 	
 	<!-- Top Bar Start--> 
 	
 	<body>
-			
-<!--
-        <div id="header">
-            <div class="centerdiv">
-				<div>
-				    <h1 class="TitleText">Tyler Rajotte</h1>
-				</div>
-				<div>
-				    <ul id="SubTextList">
-				        <li>
-                            <h2 class="SubText">Home</h2>
-				        </li>
-				        <li>
-                            <h2 class="SubText">D.A. 9</h2>
-				        </li>
-				        <li>
-                            <h2 class="SubText">Previous Work</h2>
-				        </li>
-				        <li>
-				            <h2 class="SubText">About</h2>
-				        </li>
-				    </ul>
-				</div>	
+        <div class="MasterTopBarContainer">
+            <div class="TopBarContainer2 MasterTopBarItem">
+                <div class="TopbarItem2">
+                        <img id="SiteViewButton" src="Images/Menu.svg">
+                </div>
             </div>
-        </div>  
--->
-            
-        <div id="bodyitemcontainer">
-            <section class="bodyitem photo1">
-                <p> Hi </p>
-            </section>
 
-<!--
-            <div class="bodyitem wipeoverlay" id="transition1">
-                <h1 class="title">Photo Series</h1>
+            <div class="TopBarContainer MasterTopBarItem">
+                <div class="TopbarItem" style="order:4;">
+                    <h1 class="TopbarText">Home</h1>
+                </div>
+
+                <div class="TopbarItem" style="order:3;">
+                    <h1 class="TopbarText">Digital Arts 9</h1>
+                </div>
+
+                <div class="TopbarItem" style="order:2;">
+                    <h1 class="TopbarText">Previous Work</h1>
+                </div>
+
+                <div class="TopbarItem" style="order:1;">
+                    <h1 class="TopbarText">About</h1>
+                </div>
             </div>
--->
-
-            <section class="bodyitem photo2">
-                <p> Hi </p>
-            </section>
-
-<!--
-            <div class="bodyitem wipeoverlay" id="transition2">
-                <h1 class="title">Faces Of Hunting Hills</h1>
-            </div>
--->
-
-            <section class="bodyitem photo3">
-                <p> Hi </p>
-            </section>
-
-<!--
-            <div class="bodyitem wipeoverlay" id="transition3">
-                <h1 class="title">Extreme Angles</h1>
-            </div>
--->
         </div>
-        
-        <script src="JS/main.js"></script>
+       
+		
+		<div class="sitemap">
+			im a site map
+		</div>
+		
+		<script src="JS/ScrollMagic.js"></script>		
+		
+		<div class="bodycontainer">
+		
+			<!-- Parallax window -->
+							
+			<div id="titlecontainer"> 
+					<div class="parallax-window" data-parallax="scroll" data-image-src="Images/DALogo.jpg"> 
+					</div>
+			</div>
+			
+			<!-- Main Body Start -->
+			
+			<div class="Container">
+				
+				<div class="Item" style="order:-8;">
+				  <h1 class="BodyText">Animated Gifs</h1>
+				  <h2 class="BodyText">September, 2017</h2>
+					<img class="ItemImage" src="Images/Rajotte_GifChairs.gif">
+				</div>
+				
+				<div class="Item" style="order:-7;">
+				  <h1 class="BodyText">Faces of Hunting Hills</h1>
+				  <h2 class="BodyText">September 29, 2017</h2>
+					<img class="ItemImage" src="Images/FacesOfHunting.JPG">
+				</div>
+				
+				<div class="Item" style="order:-6;">
+				  <h1 class="BodyText">Photo Series</h1>
+				  <h2 class="BodyText">September 21, 2017</h2>
+					<img class="ItemImage" src="Images/PhotoSeries.jpg">
+				</div>
+				
+				<div class="Item" style="order:-5;">
+				  <h1 class="BodyText">Extreme Angles</h1>
+				  <h2 class="BodyText">September 17, 2017</h2>
+					<img class="ItemImage" src="Images/ExtemeAngle.JPG">
+				</div>
+				
+				<div class="Item" style="order:-4;">
+				  <h1 class="BodyText">Frozen Motion</h1>
+				  <h2 class="BodyText">September 15, 2017</h2>
+					<img class="ItemImage" src="Images/StillMotion.jpg">
+				</div>
+				
+				<div class="Item" style="order:-3;">
+					<h1 class="BodyText">Rules of Composition</h1>
+					<h2 class="BodyText">September 13, 2017</h2>
+					<img class="ItemImage" src="Images/Rajotte_RulesOfComp.JPG">
+				</div>
+				
+				<div class="Item" style="order:-2;">
+					<h1 class="BodyText">Circles in Photos</h1>
+					<h2 class="BodyText">September 8, 2017</h2>
+					<img class="ItemImage" src="Images/Rajotte_CircleMiscObject1.JPG">
+				</div>
+				
+				<div class="Item" style="order:-1;">
+					<h1 class="BodyText">Biteable Healthy Eating Video</h1>
+					<h2 class="BodyText">September 5, 2017</h2>
+					<img class="ItemImage" src="Images/Biteable.jpg">
+				</div>
+			</div>
+		</div>
 	</body>
 </html>
