@@ -19,7 +19,6 @@ body, html{
 
 /*-----------Header Start-----------*/
 
-/*
 #header{
 	height: 15vh;
 	width: 100%;
@@ -61,7 +60,6 @@ h2.SubText{
 	font-family: 'Mohave', sans-serif;
 	font-size: 100%;
 }
-*/
 
 /*-----------Body Start-----------*/
 
@@ -71,20 +69,16 @@ h2.SubText{
 	position: absolute;
 }
 
-/*
 .wipeoverlay{
     width: 100vw;
     height: 100vh;
     background: rgba(0, 0, 0, 0.6);
 }
-*/
 
-/*
 h1.title{
     text-align: center;
     color: white;
 }
-*/
 
 #bodyitemcontainer{
 	width: 100%;

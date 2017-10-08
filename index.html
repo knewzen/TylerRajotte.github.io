@@ -17,7 +17,7 @@
 	<!-- Top Bar Start--> 
 	
 	<body>
-        <div class="MasterTopBarContainer">
+        <div class="MasterTopBarContainer" class="rellax" data-rellax-speed="-2">
             <div class="TopBarContainer2 MasterTopBarItem">
                 <div class="TopbarItem2">
                         <img id="SiteViewButton" src="Images/Menu.svg">
@@ -48,20 +48,18 @@
 			im a site map
 		</div>
 		
-		<script src="JS/ScrollMagic.js"></script>		
-		
 		<div class="bodycontainer">
 		
 			<!-- Parallax window -->
 							
 			<div id="titlecontainer"> 
-					<div class="parallax-window" data-parallax="scroll" data-image-src="Images/DALogo.jpg"> 
-					</div>
+				<img id="overlaylogo" src="Images/Overlay.png" class="rellax" data-rellax-speed="2">
+                <div id="backgroundlogo" class="rellax" data-rellax-speed="-6"></div>
 			</div>
 			
 			<!-- Main Body Start -->
 			
-			<div class="Container">
+			<div class="Container" class="rellax" data-rellax-speed="4">
 				
 				<div class="Item" style="order:-8;">
 				  <h1 class="BodyText">Animated Gifs</h1>
@@ -112,5 +110,18 @@
 				</div>
 			</div>
 		</div>
+        
+        <script src="JS/ScrollMagic.js"></script>
+        <script type="text/javascript" src="JS/rellax.min.js"></script>
+        <script>
+            var rellax = new Rellax('.rellax', {
+                // center: true
+                callback: function(position) {
+                    // callback every position change
+                    console.log(position);
+                }
+            });
+        </script>
+        
 	</body>
 </html>

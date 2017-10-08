@@ -1,7 +1,7 @@
 body{
 	padding: 0;
 	margin: 0;
-	background-color: #EEE8E8;
+    color: transparent;
 }
 
 html, body{
@@ -37,6 +37,24 @@ h2.BodyText{
 	border-bottom-width: 10px;
 	border-bottom-color: #C65858;
 	border-bottom-style: solid;
+    
+    color: transparent;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#overlaylogo{
+    width: 30vw;
+    height: auto;
+}
+
+#backgroundlogo{
+    background-image: url("/Images/DALogoback.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 #SiteViewButton{
@@ -51,13 +69,15 @@ h2.BodyText{
 }
 
 .bodycontainer{
-	
+	color: transparent;
 } 
 
+/*
 .parallax-window {
 	min-height: 70vh;
 	background: transparent;
 }
+*/
 
 
 .Container{
@@ -73,6 +93,7 @@ h2.BodyText{
 	padding-top: 3vh;
 	padding-bottom: 2vh;
 	
+    background-color: #EEE8E8;
 }
 .Item{
 	margin: auto;
