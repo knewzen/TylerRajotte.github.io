@@ -33,13 +33,6 @@
             Im a Ghost 3
         </div>
         
-        <button onclick="test()">Activate</button>
-        
-        <script>
-        function test() {
-          var x = document.getElementsByClassName("divtag");
-          TweenLite.to(x, 2, {opacity: 1});
-        }
-        </script>   
+        <button onclick="TweenLite.to(document.getElementsByClassName('divtag'), 1, {opacity: 1});">Activate</button>  
     </body>
 </html>

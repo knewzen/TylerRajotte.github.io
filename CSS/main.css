@@ -38,7 +38,10 @@ h2.BodyText{
 	border-bottom-color: #C65858;
 	border-bottom-style: solid;
     
-    color: transparent;
+    background-image: url("/Images/DALogoback.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     
     display: flex;
     justify-content: center;
@@ -51,10 +54,7 @@ h2.BodyText{
 }
 
 #backgroundlogo{
-    background-image: url("/Images/DALogoback.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    
 }
 
 #SiteViewButton{
@@ -69,7 +69,6 @@ h2.BodyText{
 }
 
 .bodycontainer{
-	color: transparent;
 } 
 
 /*
