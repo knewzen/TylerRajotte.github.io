@@ -1,6 +1,8 @@
 $(function(){
 	var controller = new ScrollMagic.Controller();
-
+    
+    //-------------------------------------------
+    
 	var downarrow = new ScrollMagic.Scene({
 		triggerElement: ".titlecontainer",
 		duration: "25%",
@@ -12,4 +14,16 @@ $(function(){
 		colorTrigger: "pink"
 	})
 	.addTo(controller);
+    
+    //-------------------------------------------
+    
+    var pinbar = new ScrollMagic.Scene({
+        triggerElement: "#topbarpin",
+        triggerHook: 0
+    })
+    .setPin("#topbarpin")
+    .addIndicators({
+        name: "Topbar Pin"
+    })
+    .addTo(controller);
 });
