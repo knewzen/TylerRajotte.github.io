@@ -29,20 +29,25 @@ $(function(){
 	
 });
 
-function SidebarIconAnimationOn(){
+function PullDown(){
+    TweenMax.to(".TopBarContainer", 1, {css:{height: "100%"}, ease: Power4.easeOut})
+}
+
+function PulldownIconAnimationOn(){
 	var tlsidebar = new TimelineMax({
 		
 	});
 	
 	tlsidebar.to("#SiteViewButton", 0.5, {
-		y: -6440,
+		y: -406,
 		ease: SteppedEase.config(14)
 	});
 	
 	tlsidebar.play();
+    document.getElementById("AnimationContainer").setAttribute("onClick", "PulldownIconAnimationOff();");
 }
 
-function SidebarIconAnimationOff(){
+function PulldownIconAnimationOff(){
 	var tlsidebar = new TimelineMax({
 		
 	});
@@ -53,4 +58,7 @@ function SidebarIconAnimationOff(){
 	});
 	
 	tlsidebar.play();
+    document.getElementById("AnimationContainer").setAttribute("onClick", "PulldownIconAnimationOn();");
 }
+
+

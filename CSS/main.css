@@ -130,15 +130,18 @@ h2.BodyText{
 }
 
 #SiteViewButton{
-	width: 650px;
+	width: 41px;
 	height: auto;
 	
 	cursor: pointer;
 }
 
 #AnimationContainer{
-	width: 650px;
-	height: 450px;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    
+	width: 41px;
+	height: 28px;
 	overflow: hidden;
 }
 
