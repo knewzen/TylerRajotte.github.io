@@ -15,7 +15,7 @@ $(function(){
 	})
 	.addTo(controller);
     
-    //-------------------------------------------
+    // add a fade in once past a point
     
     var pinbar = new ScrollMagic.Scene({
         triggerElement: "#topbarpin",
@@ -26,4 +26,31 @@ $(function(){
         name: "Topbar Pin"
     })
     .addTo(controller);
+	
 });
+
+function SidebarIconAnimationOn(){
+	var tlsidebar = new TimelineMax({
+		
+	});
+	
+	tlsidebar.to("#SiteViewButton", 0.5, {
+		y: -6440,
+		ease: SteppedEase.config(14)
+	});
+	
+	tlsidebar.play();
+}
+
+function SidebarIconAnimationOff(){
+	var tlsidebar = new TimelineMax({
+		
+	});
+	
+	tlsidebar.to("#SiteViewButton", 0.5, {
+		y: 0,
+		ease: SteppedEase.config(14)
+	});
+	
+	tlsidebar.play();
+}

@@ -45,8 +45,15 @@
 			<!-- Main Body Start -->
             
             <div class="TopBarContainer" id="topbarpin">
-                <img class="TopbarItem" id="SiteViewButton" style="order:5;" src="Images/Menu.svg">
+            	<div id="AnimationContainer">
+            		<img class="TopbarItem" id="SiteViewButton" style="order:5;" src="Images/SpriteArrowtoX.png">
+            	</div>
+				
+				<button onClick="SidebarIconAnimationOn()">Animation Start</button>
+				
+				<button onClick="SidebarIconAnimationOff()">Animation Stop</button>
 
+<!--
                 <div class="TopbarItem" style="order:4;">
                     <h1 class="TopbarText">Home</h1>
                 </div>
@@ -62,6 +69,7 @@
                 <div class="TopbarItem" style="order:1;">
                     <h1 class="TopbarText">About</h1>
                 </div>
+-->
             </div>
 			
 			<div class="Container">
