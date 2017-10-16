@@ -64,6 +64,15 @@ function TopIconTrigger(){
     }
 }
 
+function testcat(){
+    TweenMax.to("#SiteViewButton", 0.5, {y: -406, ease: SteppedEase.config(14)});
+    console.log("button animation trig");
+    TweenMax.to(".TopBarContainer", 1, {scaleY: 1, ease: Power4.easeOut});
+    console.log("scale animation trig");
+    document.getElementById("topbarpin").style.position = "fixed";
+    console.log("position fixed");
+}
+
 //function testflop(){
 //    //----------------FlipFlop Code
 //
