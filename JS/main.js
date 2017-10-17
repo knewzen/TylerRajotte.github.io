@@ -110,6 +110,10 @@ function TopIconTrigger(){
 		
 		// need to have it set up so it knows weither it need to remain fixed because its pinned or if its relative and dosn't have a pin. Postion can be found with scrollmagic and it can be identical and scale across many screen sizes http://scrollmagic.io/examples/basic/custom_actions.html
 		
+        //this tool bar so work as expected from any point
+        
+        //on intial load if the bar is in mid fade and is then expanded it just disapears until scroll magic has pinned it it then takes the proper place
+        
         document.getElementById("topbarpin").style.position = "fixed";
 		
         console.log(pinpos.toFixed(3))
