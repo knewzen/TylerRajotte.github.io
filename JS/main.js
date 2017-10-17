@@ -53,15 +53,15 @@ $(function(){
     
 	//fade in for the toolbar
 	
-//    var pinbar = new ScrollMagic.Scene({
-//        triggerElement: "#topbarpin",
-//        triggerHook: 0
-//    })
-//    .setPin("#topbarpin")
-//    .addIndicators({
-//        name: "Topbar Pin"
-//    })
-//    .addTo(controller);
+    var pinbar = new ScrollMagic.Scene({
+        triggerElement: "#topbarpin",
+        triggerHook: 0
+    })
+    .setPin("#topbarpin")
+    .addIndicators({
+        name: "Topbar Pin"
+    })
+    .addTo(controller);
 	
     // pin bar to top
     
@@ -115,7 +115,9 @@ function TopIconTrigger(){
         
         document.getElementById("topbarpin").style.position = "fixed";
 		
-        console.log(pinpos.toFixed(3))
+        console.log(pinpos.toString());
+		
+		// https://stackoverflow.com/questions/4187146/display-two-decimal-places-no-rounding
 		
         console.log("Animation Done - The Bar is UP");
         
