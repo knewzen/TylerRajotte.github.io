@@ -53,15 +53,15 @@ $(function(){
     
 	//fade in for the toolbar
 	
-    var pinbar = new ScrollMagic.Scene({
-        triggerElement: "#topbarpin",
-        triggerHook: 0
-    })
-    .setPin("#topbarpin")
-    .addIndicators({
-        name: "Topbar Pin"
-    })
-    .addTo(controller);
+//    var pinbar = new ScrollMagic.Scene({
+//        triggerElement: "#topbarpin",
+//        triggerHook: 0
+//    })
+//    .setPin("#topbarpin")
+//    .addIndicators({
+//        name: "Topbar Pin"
+//    })
+//    .addTo(controller);
 	
     // pin bar to top
     
@@ -88,12 +88,10 @@ function TopIconTrigger(){
         AnimationState = true;
 
         TweenMax.to("#SiteViewButton", 0.5, {y: -406, ease: SteppedEase.config(14)});
-        console.log("button animation trig");
         TweenMax.to("#topbarpin", 1, {height: "100vh", ease: Power4.easeOut});
-        console.log("scale animation trig");
         document.getElementById("topbarpin").style.position = "fixed";
-        console.log("position fixed");
         TweenMax.to("#topbarpin", 1, {opacity: 1, ease: Power4.easeOut});
+        console.log("Animation Done - The Bar is DOWN");
         
 //        $('html, body').css({
 //            overflow: 'hidden',
@@ -104,9 +102,7 @@ function TopIconTrigger(){
         AnimationState = false;
 		
 		TweenMax.to("#SiteViewButton", 0.5, {y: 0, ease: SteppedEase.config(14)});
-        console.log("button animation trig");
         TweenMax.to("#topbarpin", 1, {height: "7.5vh", ease: Power4.easeOut});
-        console.log("scale animation trig");
 		
 		// need to have it set up so it knows weither it need to remain fixed because its pinned or if its relative and dosn't have a pin. Postion can be found with scrollmagic and it can be identical and scale across many screen sizes http://scrollmagic.io/examples/basic/custom_actions.html
 		
@@ -114,11 +110,14 @@ function TopIconTrigger(){
         
         //on intial load if the bar is in mid fade and is then expanded it just disapears until scroll magic has pinned it it then takes the proper place
         
+        // it moves it to the bottom of the screen for some reason and it follows it for some reason as well
+        // maybe make it so it moves it to the top of the screen
+        
         document.getElementById("topbarpin").style.position = "fixed";
 		
         console.log(pinpos.toFixed(3))
 		
-        console.log("position fixed");
+        console.log("Animation Done - The Bar is UP");
         
 //        $('html, body').css({
 //            overflow: 'auto',
