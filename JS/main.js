@@ -1,3 +1,27 @@
+function Check_Version(){
+    var rv = -1; // Return value assumes failure.
+
+    if (navigator.appName == 'Microsoft Internet Explorer'){
+
+       var ua = navigator.userAgent,
+           re  = new RegExp("MSIE ([0-9]{1,}[\\.0-9]{0,})");
+
+       if (re.exec(ua) !== null){
+         rv = parseFloat( RegExp.$1 );
+       }
+    }
+    else if(navigator.appName == "Netscape"){                       
+       /// in IE 11 the navigator.appVersion says 'trident'
+       /// in Edge the navigator.appVersion does not say trident
+       if(navigator.appVersion.indexOf('Trident') === -1) rv = 12;
+       else rv = 11;
+    }       
+
+    return rv;          
+}
+
+console.log(Check_Version().toString());
+
 $(function(){
 	var controller = new ScrollMagic.Controller();
     
@@ -39,6 +63,21 @@ $(function(){
     })
     .addTo(controller);
 	
+    // pin bar to top
+    
+    var scrollpos = new ScrollMagic.Scene({
+        triggerElement: "#topbarpin",
+        triggerHook: 1,
+        duration: "100%"
+    })
+    .addIndicators({
+        name: "Scroll Pos"
+    })
+    .addTo(controller)
+    .on("progress", function (e) {
+         window.pinpos = e.progress;
+    });
+    //get the postion of the scrollbar
 });
 
 var AnimationState = false;
@@ -50,24 +89,36 @@ function TopIconTrigger(){
 
         TweenMax.to("#SiteViewButton", 0.5, {y: -406, ease: SteppedEase.config(14)});
         console.log("button animation trig");
-        TweenMax.to(".TopBarContainer", 1, {height: "100vh", ease: Power4.easeOut});
+        TweenMax.to("#topbarpin", 1, {height: "100vh", ease: Power4.easeOut});
         console.log("scale animation trig");
         document.getElementById("topbarpin").style.position = "fixed";
         console.log("position fixed");
+        TweenMax.to("#topbarpin", 1, {opacity: 1, ease: Power4.easeOut});
+        
+//        $('html, body').css({
+//            overflow: 'hidden',
+//            height: '100%'
+//        });
 
     } else {
         AnimationState = false;
 		
 		TweenMax.to("#SiteViewButton", 0.5, {y: 0, ease: SteppedEase.config(14)});
         console.log("button animation trig");
-        TweenMax.to(".TopBarContainer", 1, {height: "7.5vh", ease: Power4.easeOut});
+        TweenMax.to("#topbarpin", 1, {height: "7.5vh", ease: Power4.easeOut});
         console.log("scale animation trig");
 		
 		// need to have it set up so it knows weither it need to remain fixed because its pinned or if its relative and dosn't have a pin. Postion can be found with scrollmagic and it can be identical and scale across many screen sizes http://scrollmagic.io/examples/basic/custom_actions.html
 		
         document.getElementById("topbarpin").style.position = "fixed";
 		
+        console.log(pinpos.toFixed(3))
 		
         console.log("position fixed");
+        
+//        $('html, body').css({
+//            overflow: 'auto',
+//            height: 'auto'
+//        });
     }
 }
