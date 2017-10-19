@@ -22,6 +22,8 @@ function Check_Version(){
 
 console.log(Check_Version().toString());
 
+var pinpos;
+
 $(function(){
 	var controller = new ScrollMagic.Controller();
     
@@ -64,18 +66,25 @@ $(function(){
     .addTo(controller);
 	
     // pin bar to top
+	
+	var scrollposstate = false;
     
     var scrollpos = new ScrollMagic.Scene({
         triggerElement: "#topbarpin",
-        triggerHook: 1,
-        duration: "100%"
+        triggerHook: 0
     })
     .addIndicators({
         name: "Scroll Pos"
     })
     .addTo(controller)
-    .on("progress", function (e) {
-         window.pinpos = e.progress;
+    .on("enter leave", function() {
+         if(scrollposstate === false){
+			 scrollposstate = true;
+			 pinpos = true;
+		 }else{
+			 scrollposstate = false;
+			 pinpos = false;
+		 }
     });
     //get the postion of the scrollbar
 });
@@ -90,40 +99,27 @@ function TopIconTrigger(){
         TweenMax.to("#SiteViewButton", 0.5, {y: -406, ease: SteppedEase.config(14)});
         TweenMax.to("#topbarpin", 1, {height: "100vh", ease: Power4.easeOut});
         document.getElementById("topbarpin").style.position = "fixed";
+		document.getElementById("topbarpin").style.top = 0;
         TweenMax.to("#topbarpin", 1, {opacity: 1, ease: Power4.easeOut});
-        console.log("Animation Done - The Bar is DOWN");
-        
-//        $('html, body').css({
-//            overflow: 'hidden',
-//            height: '100%'
-//        });
-
     } else {
         AnimationState = false;
 		
+		TweenMax.to("#topbarpin", 0.5, {opacity: "0", ease: Power4.easeOut});
 		TweenMax.to("#SiteViewButton", 0.5, {y: 0, ease: SteppedEase.config(14)});
-        TweenMax.to("#topbarpin", 1, {height: "7.5vh", ease: Power4.easeOut});
-		
-		// need to have it set up so it knows weither it need to remain fixed because its pinned or if its relative and dosn't have a pin. Postion can be found with scrollmagic and it can be identical and scale across many screen sizes http://scrollmagic.io/examples/basic/custom_actions.html
-		
-        //this tool bar so work as expected from any point
-        
-        //on intial load if the bar is in mid fade and is then expanded it just disapears until scroll magic has pinned it it then takes the proper place
-        
-        // it moves it to the bottom of the screen for some reason and it follows it for some reason as well
-        // maybe make it so it moves it to the top of the screen
-        
-        document.getElementById("topbarpin").style.position = "fixed";
+        TweenMax.to("#topbarpin", 0, {height: "7.5vh"});
+		TweenMax.to("#topbarpin", 0.5, {opacity: "1", ease: Power4.easeOut});
+       	
+		if(pinpos === true){
+			document.getElementById("topbarpin").style.position = "fixed";
+		}else{
+			document.getElementById("topbarpin").style.position = "relative";
+		}
+       
+        // add detection to tell if the top is fixed and if its not then have it just fade in then move down  
+		// Fix opacity fading somthings off maybe I need a timeline for that perhalps
+		// apears to have affected both transitions where it moves back maybe I deleted somthing by mistake check old git commits to figure it out
 		
         console.log(pinpos.toString());
-		
-		// https://stackoverflow.com/questions/4187146/display-two-decimal-places-no-rounding
-		
-        console.log("Animation Done - The Bar is UP");
-        
-//        $('html, body').css({
-//            overflow: 'auto',
-//            height: 'auto'
-//        });
+		// pinpos returns false when user is not in area
     }
 }
