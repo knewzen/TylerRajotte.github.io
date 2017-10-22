@@ -22,6 +22,10 @@ function Check_Version(){
 
 console.log(Check_Version().toString());
 
+//site actually works not that bad on ie 10 exept the flexboxs are broken but there are ways around it https://stackoverflow.com/questions/18019450/css-flexbox-not-working-in-ie10
+// You could just have it switch over to a verstion for legacy browsers
+// or just redirect them to a place where they can download a more up to date browser
+
 var pinpos;
 
 $(function(){
