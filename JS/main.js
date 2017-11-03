@@ -27,55 +27,53 @@ var pinpos;
 $(function(){
 	var controller = new ScrollMagic.Controller();
     
+	//Fade out Scroll Arrow
 	var downarrow = new ScrollMagic.Scene({
 		triggerElement: ".titlecontainer",
 		duration: "25%",
 		triggerHook: 0
 	})
 	.setTween("#downarrow", 1, {opacity: 0, ease: Linear.easeNone}) 
-	.addIndicators({
-		name: "Down Arrow",
-		colorTrigger: "pink"
-	})
+//	.addIndicators({
+//		name: "Down Arrow",
+//		colorTrigger: "pink"
+//	})
 	.addTo(controller);
-    
-    // add a fade in once past a point
 	
+	//Fade in Topbar
 	var pinbarfade = new ScrollMagic.Scene({
 		triggerElement: "#topbarpin",
 		duration: "25%",
 		triggerHook: 0.8
 	})
 	.setTween("#topbarpin", 1, {opacity: 1, ease: Linear.easeNone})
-	.addIndicators({
-		name: "Topbar pin",
-		colorTrigger: "aqua"
-	})
+//	.addIndicators({
+//		name: "Topbar pin",
+//		colorTrigger: "aqua"
+//	})
 	.addTo(controller);
-    
-	//fade in for the toolbar
 	
+	//Auto Pin Topbar
     var pinbar = new ScrollMagic.Scene({
         triggerElement: "#topbarpin",
         triggerHook: 0
     })
     .setPin("#topbarpin")
-    .addIndicators({
-        name: "Topbar Pin"
-    })
+//    .addIndicators({
+//        name: "Topbar Pin"
+//    })
     .addTo(controller);
-	
-    // pin bar to top
 	
 	var scrollposstate = false;
     
+	//Deterimines the postion of the scroll so bar can return in natural way (Used Later)
     var scrollpos = new ScrollMagic.Scene({
         triggerElement: "#topbarpin",
         triggerHook: 0
     })
-    .addIndicators({
-        name: "Scroll Pos"
-    })
+//    .addIndicators({
+//        name: "Scroll Pos"
+//    })
     .addTo(controller)
     .on("enter leave", function() {
          if(scrollposstate === false){
@@ -86,11 +84,12 @@ $(function(){
 			 pinpos = false;
 		 }
     });
-    //get the postion of the scrollbar
 });
 
+//Performs Topbar Expantion
+
 var AnimationState = false;
-    
+
 function TopIconTrigger(){
 
     if(AnimationState === false){
@@ -106,23 +105,31 @@ function TopIconTrigger(){
         TweenMax.to("#topbarpin", 1, {opacity: 1, ease: Power4.easeOut});
     } else {
         AnimationState = false;
-		
-		TweenMax.to("#topbarpin", 4, {opacity: "0", ease: Power4.easeOut});
-		TweenMax.to("#SiteViewButton", 0.5, {y: 0, ease: SteppedEase.config(14)});
-        TweenMax.to("#topbarpin", 0, {height: "7.5vh"});
-//		TweenMax.to("#topbarpin", 0.5, {opacity: "1", ease: Power4.easeOut});
-       	
+
 		if(pinpos === true){
+			//Before Scroll Point
 			document.getElementById("topbarpin").style.position = "fixed";
+			TweenMax.to("#topbarpin", 1, {height: "7.5vh", ease: Power4.easeOut});
+			//Set height back to default
+			TweenMax.to("#SiteViewButton", 0.5, {y: 0, ease: SteppedEase.config(14)});
+			//Trigger X Animation
+			
 		}else{
-			document.getElementById("topbarpin").style.position = "relative";
+			//After Scoll Point
+			
+			//Timeline so Fades occur after each other
+			var fadetl = new TimelineLite();
+
+			fadetl.to("#topbarpin", 0.5, {opacity: "0", ease: Power4.easeOut})
+			//Fade Out
+			.to("#SiteViewButton", 0.5, {y: 0, ease: SteppedEase.config(14)}, 0)
+			//Trigger Animation
+			.to("#topbarpin", 0, {height: "7.5vh", ease: Power4.easeOut})
+			//Sets Height to normal
+			.add(function() {document.getElementById("topbarpin").style.position = "relative"})
+			//Reset Topbar Position
+			.to("#topbarpin", 2, {opacity: "1", ease: Power4.easeOut}, 0.5);
+			//Fade In
 		}
-       
-        // add detection to tell if the top is fixed and if its not then have it just fade in then move down  
-		// Fix opacity fading somthings off maybe I need a timeline for that perhalps
-		// apears to have affected both transitions where it moves back maybe I deleted somthing by mistake check old git commits to figure it out
-		
-        console.log(pinpos.toString());
-		// pinpos returns false when user is not in area
     }
 }
