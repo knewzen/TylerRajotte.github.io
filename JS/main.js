@@ -97,17 +97,20 @@ function TopIconTrigger(){
         AnimationState = true;
 
         TweenMax.to("#SiteViewButton", 0.5, {y: -406, ease: SteppedEase.config(14)});
+		//Animate three lines
         TweenMax.to("#topbarpin", 1, {height: "100vh", ease: Power4.easeOut});
+		// main pull down
         document.getElementById("topbarpin").style.position = "fixed";
 		document.getElementById("topbarpin").style.top = 0;
+		// put bar to follow screen
         TweenMax.to("#topbarpin", 1, {opacity: 1, ease: Power4.easeOut});
     } else {
         AnimationState = false;
 		
-		TweenMax.to("#topbarpin", 0.5, {opacity: "0", ease: Power4.easeOut});
+		TweenMax.to("#topbarpin", 4, {opacity: "0", ease: Power4.easeOut});
 		TweenMax.to("#SiteViewButton", 0.5, {y: 0, ease: SteppedEase.config(14)});
         TweenMax.to("#topbarpin", 0, {height: "7.5vh"});
-		TweenMax.to("#topbarpin", 0.5, {opacity: "1", ease: Power4.easeOut});
+//		TweenMax.to("#topbarpin", 0.5, {opacity: "1", ease: Power4.easeOut});
        	
 		if(pinpos === true){
 			document.getElementById("topbarpin").style.position = "fixed";
