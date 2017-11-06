@@ -103,10 +103,31 @@ function TopIconTrigger(){
 		//Animate three lines
         TweenMax.to("#topbarpin", 1, {height: "100vh", ease: Power4.easeOut});
 		// main pull down
-        document.getElementById("topbarpin").style.position = "fixed";
-		document.getElementById("topbarpin").style.top = 0;
-		// put bar to follow screen
+        $("#TopbarPin").css("position", "fixed");
+		$("#TopbarPin").css("top", "0");
+		// put bar to top and follow screen
+		
+		$("h1.TopbarText").css("font-size", "3rem");
+		$("h1.TopbarText").css("font-weight", "normal");
+		$(".TopbarBody").css("display", "flex");
+		$(".TopbarBody").css("padding", "2%");
+		$(".TopbarText").css("padding", "3%");
+		
+		$(".TopbarContainer").css("align-Items", "center");
+		
+		//document.getElementById("main").style.alignItems = "flex-start";
+
+		
         TweenMax.to("#topbarpin", 1, {opacity: 1, ease: Power4.easeOut});
+		//Make Opacity 1 if top bar is in mid scroll
+		
+		TweenMax.staggerFrom(".TopbarBodyHome", 0.5, {opacity:0, ease:Power4.easeOut}, 0.2);
+		TweenMax.staggerFrom(".TopbarBodyDA9", 0.5, {opacity:0, ease:Power4.easeOut}, 0.2);
+		TweenMax.staggerFrom(".TopbarBodyPreviousWork", 0.5, {opacity:0, ease:Power4.easeOut}, 0.2);
+		//Animate the entrance of the products
+		
+		
+		
     } else {
         AnimationState = false;
 
@@ -117,6 +138,13 @@ function TopIconTrigger(){
 			//Set height back to default
 			TweenMax.to("#SiteViewButton", 0.5, {y: 0, ease: SteppedEase.config(14)});
 			//Trigger X Animation
+			
+			$("h1.TopbarText").css("font-size", "1.75rem");
+			$("h1.TopbarText").css("font-weight", "lighter");
+			$(".TopbarBody").css("display", "none");
+			$(".TopbarBody").css("padding", "0");
+			$(".TopbarText").css("padding", "0");
+		
 			
 		}else{
 			//After Scoll Point
@@ -132,6 +160,13 @@ function TopIconTrigger(){
 			//Sets Height to normal
 			.add(function() {document.getElementById("topbarpin").style.position = "relative"})
 			//Reset Topbar Position
+			.add(function(){
+			$("h1.TopbarText").css("font-size", "1.75rem");
+			$("h1.TopbarText").css("font-weight", "lighter");
+			$(".TopbarBody").css("display", "none");
+			$(".TopbarBody").css("padding", "0");
+			$(".TopbarText").css("padding", "0");
+			})
 			.to("#topbarpin", 2, {opacity: "1", ease: Power4.easeOut}, 0.5);
 			//Fade In
 		}
