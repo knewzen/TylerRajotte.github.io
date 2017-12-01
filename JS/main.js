@@ -26,6 +26,21 @@ console.log(Check_Version().toString());
 // You could just have it switch over to a verstion for legacy browsers
 // or just redirect them to a place where they can download a more up to date browser
 
+console.log($(window).scrollTop()); // returns pixel value
+
+$(window).scroll(
+	function scrolltimer(){
+		console.log($(window).scrollTop());
+		if($(window).scrollTop() >= 995){
+			$("#TopbarPin").css("position", "fixed");
+			console.log("Pined BOIIIIIIIII");
+		}
+	}
+	setTimeout(scrolltimer, 1000);
+);
+
+
+
 var pinpos;
 
 $(function(){
@@ -57,16 +72,16 @@ $(function(){
 //	})
 	.addTo(controller);
 	
-	//Auto Pin Topbar
-    var pinbar = new ScrollMagic.Scene({
-        triggerElement: "#topbarpin",
-        triggerHook: 0
-    })
-    .setPin("#topbarpin")
-//    .addIndicators({
-//        name: "Topbar Pin"
+//	//Auto Pin Topbar
+//    var pinbar = new ScrollMagic.Scene({
+//        triggerElement: "#topbarpin",
+//        triggerHook: 0
 //    })
-    .addTo(controller);
+//    .setPin("#topbarpin")
+////    .addIndicators({
+////        name: "Topbar Pin"
+////    })
+//    .addTo(controller);
 	
 	var scrollposstate = false;
     
@@ -97,15 +112,17 @@ var AnimationState = false;
 function TopIconTrigger(){
 
     if(AnimationState === false){
+		//PULLDOWN
         AnimationState = true;
+		
+		$("#TopbarPin").css("position", "fixed");
+		$("#TopbarPin").css("top", "0");
+		// put bar to top and follow screen
 
         TweenMax.to("#SiteViewButton", 0.5, {y: -406, ease: SteppedEase.config(14)});
 		//Animate three lines
         TweenMax.to("#topbarpin", 1, {height: "100vh", ease: Power4.easeOut});
 		// main pull down
-        $("#TopbarPin").css("position", "fixed");
-		$("#TopbarPin").css("top", "0");
-		// put bar to top and follow screen
 		
 		$("h1.TopbarText").css("font-size", "3rem");
 		$("h1.TopbarText").css("font-weight", "normal");
@@ -129,6 +146,7 @@ function TopIconTrigger(){
 		
 		
     } else {
+		//RETRACT
         AnimationState = false;
 
 		if(pinpos === true){
